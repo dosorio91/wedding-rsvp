@@ -29,18 +29,10 @@ export function GuestSearch() {
     const timeoutId = setTimeout(async () => {
       setLoading(true)
       try {
-        console.log('Haciendo búsqueda:', query) // Debug
         const response = await fetch(`/api/guests/search?q=${encodeURIComponent(query)}`)
-        console.log('Response status:', response.status) // Debug
         if (response.ok) {
           const data = await response.json()
-          console.log('Datos recibidos:', data) // Debug
-          console.log('Número de invitados:', data.length) // Debug
-          console.log('Primer invitado:', data[0]) // Debug
           setGuests(data)
-          console.log('Estado guests actualizado:', data) // Debug
-        } else {
-          console.error('Error response:', response.status)
         }
       } catch (error) {
         console.error('Error searching guests:', error)
@@ -110,7 +102,6 @@ export function GuestSearch() {
                     <div className="text-sm font-medium text-gray-700 mb-2">
                       Invitados encontrados
                     </div>
-                    {console.log('Renderizando invitados:', guests)} {/* Debug */}
                     {guests.map((guest) => (
                       <div
                         key={guest.id}
