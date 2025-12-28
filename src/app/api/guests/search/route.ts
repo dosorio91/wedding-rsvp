@@ -20,11 +20,21 @@ export async function GET(request: NextRequest) {
       },
     })
 
-    const searchTerm = query.toLowerCase()
-    const guests = allGuests.filter(guest => 
-      guest.firstName.toLowerCase().includes(searchTerm) || 
-      guest.lastName.toLowerCase().includes(searchTerm)
-    ).slice(0, 8)
+    // Función para remover acentos
+    const removeAccents = (str: string) => {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    }
+
+    const searchTerm = removeAccents(query)
+    const guests = allGuests.filter(guest => {
+      const firstName = removeAccents(guest.firstName)
+      const lastName = removeAccents(guest.lastName)
+      const fullName = `${firstName} ${lastName}`
+      
+      return firstName.includes(searchTerm) || 
+             lastName.includes(searchTerm) || 
+             fullName.includes(searchTerm)
+    }).slice(0, 8)
 
     return NextResponse.json(guests)
   } catch (error) {
