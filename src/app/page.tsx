@@ -9,7 +9,7 @@ export default function HomePage() {
             Cocó & Dani
           </h1>
           <p className="text-xl text-gray-600 mb-2">
-            Nos casamos el 20 de febrero de 2025
+            Nos casamos el 20 de febrero de 2026
           </p>
           <p className="text-lg text-gray-500">
             Confirma tu participación

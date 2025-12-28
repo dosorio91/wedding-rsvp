@@ -19,8 +19,10 @@ export default function GraciasPage() {
           >
             Volver al inicio
           </a>
-        </div>
-      </div>
+        </div>        
+        <p className="text-sm text-gray-500 mt-8 text-center max-w-md mx-auto">
+          <strong>Nota:</strong> Recuerda que si fuiste invitado con pareja o familia, debes confirmar a cada uno de los invitados de manera individual.
+        </p>      </div>
     </div>
   )
 }
