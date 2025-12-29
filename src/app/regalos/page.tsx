@@ -41,6 +41,21 @@ Correo: daniel.osorioalva@gmail.com`
           </p>
         </div>
 
+        <div className="mb-6">
+          <a 
+            href="https://milistadenovios.cl/enviar-regalo?id=33138"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-rose-500 hover:bg-rose-600 text-white px-12 py-4 rounded-lg transition-colors text-lg font-semibold"
+          >
+            Lista de Novios
+          </a>
+        </div>
+
+        <p className="text-gray-600 mb-6">
+          Si quieres regalarnos directamente te dejamos nuestros datos de transferencia :)
+        </p>
+
         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold text-gray-900">
@@ -68,24 +83,13 @@ Correo: daniel.osorioalva@gmail.com`
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="mt-8">
           <a 
-            href="https://milistadenovios.cl/enviar-regalo?id=33138"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-lg transition-colors text-lg font-semibold"
+            href="/"
+            className="inline-block text-gray-600 hover:text-gray-800 underline"
           >
-            Lista de Novios
+            Volver al inicio
           </a>
-          
-          <div>
-            <a 
-              href="/"
-              className="inline-block text-gray-600 hover:text-gray-800 underline"
-            >
-              Volver al inicio
-            </a>
-          </div>
         </div>
 
         <p className="text-2xl font-semibold text-rose-600 mt-8">
